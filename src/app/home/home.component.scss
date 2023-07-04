@@ -1,0 +1,85 @@
+.gradient {
+    
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.background {
+  background-image: url('../../assets/KastStan.png');
+}
+.foreground {
+  background-image: url('../../assets/BarcaUit.png');
+}
+
+p {
+  color:white
+}
+
+.body-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 5px;
+}
+.parallax {
+  position: relative;
+  min-height: 300px;
+  height: 60vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  z-index: -1; 
+
+  & > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-position: center;
+    background-size: cover;
+    filter: contrast(1.2);
+  }
+
+  & > h2 {
+    position: relative;
+    z-index: 1;
+  }
+  .foreground {
+    transform: translateZ(-5px) scale(1.5);
+    opacity: 0.8;
+    width: 50%;
+  }
+}
+.type-myself::after {
+  padding-right: 0px;
+  display: inline-block;
+  border-right: white 4px solid;
+}
+.list {
+  margin-top: 40px;
+}
+.experience {
+  img{
+    height: 150px;
+    object-position: center;
+    margin-right: 40px;
+  }
+}

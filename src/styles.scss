@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply font-headers;
+  }
+}
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+html {
+  scroll-behavior: smooth;
+}
+$url : 'https://rsms.me/inter/';
+
+@font-face {
+    font-family: inter;
+    src: url($url + 'font-files/Inter-Thin.woff2?v=3.19') format("woff2");
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Inter var';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url($url + 'font-files/Inter-roman.var.woff2?v=3.19') format('woff2');
+    font-named-instance: 'Regular';
+  }
+
+*{
+    font-family: inter var;
+}
+
+.active {
+    color: rgba(36, 188, 148, 1);
+}
+
+.btn{
+    background-color: rgba(36, 188, 148, 1);
+    color: #F4FFFF;
+    border-radius: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover{
+        background-color: #F4FFFF;
+        color: rgba(36, 188, 148, 1);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
