@@ -15,20 +15,47 @@ export class HomeComponent implements OnInit{
   
   arrow = faArrowDown;
   items? : Item[];  
+  currentOpenDetails : string = "empty";
 
+  languageItems : Item[];
+  databaseItems : Item[];
+  frameworkItems : Item[];
+  otherItems : Item[];
 
 
   constructor(private route : ActivatedRoute, private itemService : ItemService) { }
 
   ngOnInit(): void {
     this.retrieveItems();
+   
   }
 
   openDetails($event : any){
-    console.log($event.target.id);
-    
-  }
+    // this.closeDetails();
+    if(this.currentOpenDetails == "empty"){
+      this.currentOpenDetails = $event.target.id;
+      document.getElementById(`desc${$event.target.id}`)?.classList.toggle("active");
+      document.getElementById(`${this.currentOpenDetails}`)?.classList.toggle("active");
 
+      //disable previous enable other
+    } else if(this.currentOpenDetails != $event.target.id){
+
+      document.getElementById(`desc${this.currentOpenDetails}`)?.classList.toggle("active");
+      document.getElementById(`${this.currentOpenDetails}`)?.classList.toggle("active");
+
+      this.currentOpenDetails = $event.target.id;
+
+      document.getElementById(`desc${this.currentOpenDetails}`)?.classList.toggle("active");
+      document.getElementById(`${this.currentOpenDetails}`)?.classList.toggle("active");
+
+      //toggle off
+    } else if(this.currentOpenDetails == $event.target.id){
+      document.getElementById(`desc${$event.target.id}`)?.classList.toggle("active");
+      document.getElementById(`${$event.target.id}`)?.classList.toggle("active");
+      
+      this.currentOpenDetails = "empty";      
+    }
+  }
 
   retrieveItems(){
     this.itemService.getAll().snapshotChanges().pipe(
@@ -39,6 +66,12 @@ export class HomeComponent implements OnInit{
       )
     ).subscribe(items => {
       this.items = items;
+      this.languageItems = this.items.filter(item => item.type == "language");
+      this.databaseItems = this.items.filter(item => item.type == "database");
+      this.frameworkItems = this.items.filter(item => item.type == "framework");
+      this.otherItems = this.items.filter(item => item.type == "other");
+      console.log(this.frameworkItems);
+      
     })
   }
 }

@@ -117,12 +117,18 @@ I have a passion for programming. I have successfully learned various programmin
           </div>
           <div class="experience flex">
 
-            <div *ngFor="let item of items" class="logo relative cursor-pointer" >
-              <span (click)="openDetails($event)"  id="{{item.name}}">
-                <img *ngIf="item.type == 'framework'" src="{{item.imageUrl}}" alt="" class=" mx-auto"  id="{{item.name}}">
+            <div *ngFor="let item of frameworkItems" class="logo relative cursor-pointer block" >
+              <span (click)="openDetails($event)" id="{{item.name}}">
+                <img  src="{{item.imageUrl}}"  alt="" class=" mx-auto"  id="{{item.name}}">
                 <p class="name-text absolute"  id="{{item.name}}">{{item.name}}</p>
               </span>
             </div>
+          </div>
+          <div class="descriptions">
+            <span *ngFor="let item of frameworkItems" class="hidden" id="desc{{item.name}}">
+              <p class="border-b-2 border-white w-fit">{{item.description}}</p>
+             
+            </span>
           </div>
         </div>
         <div class="list ml-10">
@@ -130,8 +136,8 @@ I have a passion for programming. I have successfully learned various programmin
             <p class="text-3xl underline">Databases</p>
           </div>
           <div class="experience flex">
-            <div *ngFor="let item of items" class="logo relative cursor-pointer">
-              <img *ngIf="item.type == 'database'" src="{{item.imageUrl}}" alt="" class=" mx-auto">
+            <div *ngFor="let item of databaseItems" class="logo relative cursor-pointer">
+              <img src="{{item.imageUrl}}" alt="" class=" mx-auto">
               <p class="name-text absolute">{{item.name}}</p>
             </div>
           </div>
@@ -141,8 +147,8 @@ I have a passion for programming. I have successfully learned various programmin
             <p class="text-3xl underline">Languages</p>
           </div>
           <div class="experience flex">
-            <div *ngFor="let item of items" class="logo relative cursor-pointer">
-              <img *ngIf="item.type == 'language'" src="{{item.imageUrl}}" alt="" class=" mx-auto">
+            <div *ngFor="let item of languageItems" class="logo relative cursor-pointer">
+              <img src="{{item.imageUrl}}" alt="" class=" mx-auto">
               <p class="name-text absolute">{{item.name}}</p>
             </div>
           </div>
@@ -152,8 +158,8 @@ I have a passion for programming. I have successfully learned various programmin
             <p class="text-3xl underline">Other</p>
           </div>
           <div class="experience flex">
-            <div *ngFor="let item of items" class="logo relative cursor-pointer">
-              <img *ngIf="item.type == 'other'" src="{{item.imageUrl}}" alt="" class=" mx-auto">
+            <div *ngFor="let item of otherItems" class="logo relative cursor-pointer">
+              <img src="{{item.imageUrl}}" alt="" class=" mx-auto">
               <p class="name-text absolute">{{item.name}}</p>
             </div>
           </div>

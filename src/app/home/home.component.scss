@@ -102,6 +102,7 @@ p {
     opacity: 0;
     bottom: 0%;
     right: 50%;
+    text-decoration: none;
   }
 
   &:hover {
@@ -116,6 +117,32 @@ p {
       opacity: 1;
       bottom: 45%;
     }
+  }
+
+  .active {
+    img {
+      opacity: 0.5;
+      transform: scale(1.1);
+      transition: 0.2s;
+    }
+    p {
+      transition: 0.8s;
+      opacity: 1;
+      bottom: 45%;
+      text-decoration: underline;
+    }
+  }
+
+}
+.descriptions {
+  .active {
+    display: inline !important;
+    transition: 0.8s;
+    opacity: 1;
+    bottom: 45%;
+  }
+  .hidden {
+    transition: 0.8s;
   }
 
 }
