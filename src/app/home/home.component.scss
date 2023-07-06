@@ -6,6 +6,14 @@
   -webkit-text-fill-color: transparent;
   animation: gradient 15s ease infinite;
 }
+.lessgradient {
+    
+  background: linear-gradient(-45deg, #FFD1FF, #FAD0C4);
+  background-size: 400% 400%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: gradient 15s ease infinite;
+}
 
 @keyframes gradient {
 	0% {
@@ -82,4 +90,32 @@ p {
     object-position: center;
     margin-right: 40px;
   }
+}
+.logo {
+
+  cursor: pointer;
+  img{
+    transition: 0.3s;
+  }
+  p {
+    transition: 0.4s;
+    opacity: 0;
+    bottom: 0%;
+    right: 50%;
+  }
+
+  &:hover {
+    img {
+      opacity: 0.5;
+      transform: scale(1.1);
+      transition: 0.2s;
+
+    }
+    p {
+      transition: 0.8s;
+      opacity: 1;
+      bottom: 45%;
+    }
+  }
+
 }

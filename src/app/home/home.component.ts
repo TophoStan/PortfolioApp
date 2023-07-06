@@ -2,7 +2,9 @@ import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { faArrowAltCircleDown, faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map } from 'rxjs';
+import { Item } from '../models/item.class';
+import { ItemService } from '../tutorial.service';
 
 @Component({
   selector: 'app-home',
@@ -12,23 +14,31 @@ import { BehaviorSubject } from 'rxjs';
 export class HomeComponent implements OnInit{
   
   arrow = faArrowDown;
-  currentPosition = window.scrollY;
+  items? : Item[];  
 
 
-  constructor(private route : ActivatedRoute) { 
-  }
+
+  constructor(private route : ActivatedRoute, private itemService : ItemService) { }
 
   ngOnInit(): void {
-
+    this.retrieveItems();
   }
-  ngAfterViewChanges(){
+
+  openDetails($event : any){
+    console.log($event.target.id);
     
   }
 
-  changeArrow(event : any){
 
-    this.arrow = faArrowUp;
-    console.log(event);
-    
+  retrieveItems(){
+    this.itemService.getAll().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(items => {
+      this.items = items;
+    })
   }
 }
