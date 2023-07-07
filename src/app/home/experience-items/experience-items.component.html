@@ -3,18 +3,16 @@
       <p class="text-3xl underline">{{title}}</p>
     </div>
     <div class="experience flex">
-
-      <div *ngFor="let item of itemArr" class="logo relative cursor-pointer block pl-4" >
-        <span (click)="openDetails($event)" id="{{item.name}}">
-          <img  src="{{item.imageUrl}}"  alt="" class=" mx-auto"  id="{{item.name}}">
-          <p class="name-text absolute"  id="{{item.name}}">{{item.name}}</p>
+      <div *ngFor="let item of itemArr" class="logo relative cursor-pointer block" >
+        <span (click)="openDetails($event)" id="{{item.name}}" class="mx-auto  pl-4">
+          <img  src="{{item.imageUrl}}"  alt="" class=""  id="{{item.name}}">
+          <p class="absolute"  id="{{item.name}}">{{item.name}}</p>
         </span>
       </div>
     </div>
     <div class="descriptions">
       <span *ngFor="let item of itemArr" class="invisible" id="desc{{item.name}}">
         <p class="">{{item.description}}</p>
-       
       </span>
     </div>
   </div>

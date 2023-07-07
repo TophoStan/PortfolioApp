@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit{
   otherItems : Item[];
 
 
-  constructor(private route : ActivatedRoute, private itemService : ItemService) { }
+  constructor(private itemService : ItemService) { }
 
   ngOnInit(): void {
     this.retrieveItems();
