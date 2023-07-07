@@ -1,0 +1,57 @@
+<div *ngIf="currentItem" class="edit-form">
+    <h4>Item</h4>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control "
+          id="name"
+          [(ngModel)]="currentItem.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentItem.description"
+          name="description"
+
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="type">Type</label>
+        <input
+          type="text"
+          class="form-control"
+          id="type"
+          [(ngModel)]="currentItem.type"
+          name="type"
+        />
+      </div>
+      <div class="form-group">
+        <label for="imageUrl">ImageURL</label>
+        <input
+          type="text"
+          class="form-control"
+          id="imageUrl"
+          [(ngModel)]="currentItem.imageUrl"
+          name="imageUrl"
+        />
+      </div>
+  
+    </form>
+  
+    <button type="submit" class="badge badge-success" (click)="updateItem()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  
+  <div *ngIf="!currentItem">
+    <br />
+    <p>Cannot access this Item...</p>
+  </div>

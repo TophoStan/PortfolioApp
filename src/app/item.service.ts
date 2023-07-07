@@ -22,6 +22,13 @@ export class ItemService {
   create(item: Item) : any {
     return this.itemsRef.add({...item});
   }
+  update(id: string, data: any): Promise<void> {
+    return this.itemsRef.doc(id).update(data);
+  }
+
+  delete(id: string): Promise<void> {
+    return this.itemsRef.doc(id).delete();
+  }
 
 
   

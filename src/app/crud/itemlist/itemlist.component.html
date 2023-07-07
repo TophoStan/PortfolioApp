@@ -1,0 +1,28 @@
+<div class="list row text-white">
+    <div class="col-md-6">
+      <h4>items List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let item of items; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveItem(item, i)"
+        >
+          {{ item.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="currentItem">
+        <app-itemdetail
+          (refreshList)="refreshList()"
+          [item]="currentItem"
+        ></app-itemdetail>
+      </div>
+  
+      <div *ngIf="!currentItem">
+        <br />
+        <p>Please click on a item...</p>
+      </div>
+    </div>
+  </div>

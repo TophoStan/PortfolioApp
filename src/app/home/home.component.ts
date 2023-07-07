@@ -4,7 +4,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 import { faArrowAltCircleDown, faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { BehaviorSubject, map } from 'rxjs';
 import { Item } from '../models/item.class';
-import { ItemService } from '../tutorial.service';
+import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-home',

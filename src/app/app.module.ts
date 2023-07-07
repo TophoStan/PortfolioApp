@@ -10,8 +10,10 @@ import { environment } from 'src/environments/environment.development';
 import { FormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
-import { CreateItemComponent } from './create-item/create-item.component';
+import { CreateItemComponent } from './crud/create-item/create-item.component';
 import { ExperienceItemsComponent } from './home/experience-items/experience-items.component';
+import { ItemlistComponent } from './crud/itemlist/itemlist.component';
+import { ItemdetailComponent } from './crud/itemdetail/itemdetail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ExperienceItemsComponent } from './home/experience-items/experience-ite
     HomeComponent,
     CreateItemComponent,
     ExperienceItemsComponent,
+    ItemlistComponent,
+    ItemdetailComponent,
   ],
   imports: [
     BrowserModule,
