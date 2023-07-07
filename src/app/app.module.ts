@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { CreateItemComponent } from './create-item/create-item.component';
+import { ExperienceItemsComponent } from './home/experience-items/experience-items.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CreateItemComponent } from './create-item/create-item.component';
     NavbarComponent,
     HomeComponent,
     CreateItemComponent,
+    ExperienceItemsComponent,
   ],
   imports: [
     BrowserModule,
