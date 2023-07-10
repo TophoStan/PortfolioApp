@@ -135,6 +135,7 @@ p {
 
 }
 .descriptions {
+  
   .active {
     display: block !important;
     height: 40px !important;
@@ -143,6 +144,7 @@ p {
     // bottom: 45%;
   }
   .invisible {
+    border-bottom: 1px solid white !important;
     display: block;
     transition: 0.8s;
     height: 0px;
@@ -150,4 +152,10 @@ p {
     visibility: visible;
   }
 
+}
+.content {
+  overflow: hidden;
+    overscroll-behavior: none;
+    -webkit-perspective: 1px;
+    perspective: 1px;
 }
