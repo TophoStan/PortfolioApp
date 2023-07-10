@@ -14,6 +14,8 @@ import { CreateItemComponent } from './crud/create-item/create-item.component';
 import { ExperienceItemsComponent } from './home/experience-items/experience-items.component';
 import { ItemlistComponent } from './crud/itemlist/itemlist.component';
 import { ItemdetailComponent } from './crud/itemdetail/itemdetail.component';
+import { NgIconsModule, provideIcons } from '@ng-icons/core';
+import { ContactItemsComponent } from './home/contact-items/contact-items.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { ItemdetailComponent } from './crud/itemdetail/itemdetail.component';
     ExperienceItemsComponent,
     ItemlistComponent,
     ItemdetailComponent,
+    ContactItemsComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { ItemdetailComponent } from './crud/itemdetail/itemdetail.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

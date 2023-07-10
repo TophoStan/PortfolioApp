@@ -17,11 +17,16 @@ export class HomeComponent implements OnInit{
   items? : Item[];  
   currentOpenDetails : string = "empty";
 
+
+
+
   languageItems : Item[];
   databaseItems : Item[];
   frameworkItems : Item[];
   otherItems : Item[];
 
+
+  //icons
 
   constructor(private itemService : ItemService) { }
 
