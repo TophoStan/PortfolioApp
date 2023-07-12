@@ -25,6 +25,7 @@ module.exports = {
         'paragraph':'1.25em',
         'card':'1.5em',
         'welcome-header':'9rem',
+        'welcome-default':'3.5rem',
       },
       maxWidth: {
         'card': '280px'
@@ -43,7 +44,7 @@ module.exports = {
         'logo': '8rem',
       },
       gap:{
-        'bottomLinks': '33vh',
+        'bottomLinks': '25vh',
       }
       
     },

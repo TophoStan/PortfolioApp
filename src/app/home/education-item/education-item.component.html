@@ -1,0 +1,19 @@
+<div class="sm:pb-96 text-white">
+    <div class="sm:w-1/2 sm:float-left sm:block w-full  ">
+        <div class="sm:w-1/3 sm:float-left">
+            <img src="{{schoolLogo}}" alt="" class="m-auto h-72 object-cover w-auto">
+        </div>
+        <div class="sm:w-2/3 sm:float-right mx-auto text-center sm:text-left">
+            <h3 class="text-2xl sm:text-4xl font-bold underline text-white">{{schoolName}}</h3>
+            <p class="text-xl italic">{{level}}</p>
+            <p class="text-xl">{{yearFrom}} - {{yearTo}}</p>
+
+            <p class="text-xl" *ngFor="let grade of grades">{{grade}}</p>
+        </div>
+    </div>
+
+    <div class="sm:w-1/2 sm:float-right p-8">
+        <p>{{description}}</p>
+    </div>
+
+</div>

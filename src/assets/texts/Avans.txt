@@ -1,0 +1,14 @@
+In the first and second year of my studies, I have acquired a wealth of knowledge. The continuous
+exposure to new concepts and technologies has been truly astonishing. Throughout this period, I have
+delved into multiple programming languages such as Java (for Android development), C#, JavaScript, and
+TypeScript. Additionally, I have gained proficiency in utilizing frameworks like Entity Framework (EF) for
+C#, NestJS, and Mongoose for MongoDB.
+Moreover, I have pursued courses focused on enhancing user experience (UX), honing my skills in
+professional writing and communication in both Dutch and English. These courses have equipped me with the
+necessary tools to effectively convey ideas and information.
+Throughout various projects of varying durations, I have had the opportunity to work with different
+project management methodologies such as Waterfall, Agile Scrum, and Kanban. This diverse range of
+experiences has enabled me to develop leadership skills, learn how to collaborate within a team, as well
+as thrive independently.
+These accumulated experiences have shaped me into a versatile professional capable of working across every
+layer of the technology stack, adapting to the needs of any given situation.

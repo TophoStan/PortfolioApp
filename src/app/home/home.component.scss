@@ -144,7 +144,10 @@ p {
     // bottom: 45%;
   }
   .invisible {
-    border-bottom: 1px solid white !important;
+    p {
+      border-bottom: 1px solid white !important;
+      width: fit-content;
+    }
     display: block;
     transition: 0.8s;
     height: 0px;

@@ -16,6 +16,7 @@ import { ItemlistComponent } from './crud/itemlist/itemlist.component';
 import { ItemdetailComponent } from './crud/itemdetail/itemdetail.component';
 import { NgIconsModule, provideIcons } from '@ng-icons/core';
 import { ContactItemsComponent } from './home/contact-items/contact-items.component';
+import { EducationItemComponent } from './home/education-item/education-item.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ContactItemsComponent } from './home/contact-items/contact-items.compon
     ItemlistComponent,
     ItemdetailComponent,
     ContactItemsComponent,
+    EducationItemComponent,
   ],
   imports: [
     BrowserModule,

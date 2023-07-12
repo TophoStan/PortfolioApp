@@ -140,6 +140,7 @@ p {
     opacity: 1 !important;
     p {
       border-bottom: 1px solid white !important;
+      width: fit-content;
     }
 
     // bottom: 45%;
@@ -153,7 +154,7 @@ p {
     visibility: visible;
     p {
       border-bottom: 1px solid white;
-
+      width: fit-content;
     }
   }
 
